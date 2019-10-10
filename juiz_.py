@@ -16,16 +16,13 @@ class BilMon:
     def __contains__(self, other):
        return self.denominacion == other.denominacion and self.valor == other.valor
 
-    def __str__(self):
-        ''.format()
-            
+
 class Caja:
     def __init__(self, nombre, lisBilMon = {}):
         self.__lisBilMon = lisBilMon
         self.__nombre = nombre
 
     def agregarBilMon(self, bm, cantidad):
-        print(bm.__str__())
         if bm not in self.__lisBilMon.keys():
             self.__lisBilMon[bm] = cantidad
         else:
