@@ -3,10 +3,7 @@ class Recorrido:
         self.__recorrido = [] #segmento
         self.__nombre = nombre
 
-    def __str__(self):
-        return self.__recorrido
-
-    def dar_largo(self):
+    def dar_longitud(self):
         pass
 
     def dar_tiempo(self,transporte):
@@ -20,8 +17,8 @@ class Recorrido:
 
     def agregar_segmento(self,segmento):
         self.__recorrido.append(segmento)
-        print(self.__recorrido)
 
     @staticmethod
     def dar_recorrido(self):
-        return self.__recorrido
+        for obje in range (len(self.__recorrido)):
+            print(self.__recorrido[obje])
