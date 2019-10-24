@@ -8,9 +8,16 @@ class Segmento:
         self.__peaje = peaje # float
         self.__largo = largo # float
 
+    def __str__(self):
+        return '{} - {} - {} - {} - {}'.format(self.__origen, self.__destino, self.__precio, self.__peaje, self.__largo)
+
     def dar_consumo(self): # float
         return transporte.Transporte.consumo * self.__largo
 
     @property
     def precio(self):
         return self.__precio + self.__peaje
+
+    @property
+    def largo(self):
+        return self.__largo
