@@ -7,5 +7,8 @@ class Pasajero:
         self.__origen = origen
         self.__destino = destino
 
+    def __str__(self):
+        return '{} - {} - {} - {}'.format(self.__dni, self.__nombre, self.__origen,self.__destino)
+
     def dar_precio(self):
         return segmento.Segmento.precio
