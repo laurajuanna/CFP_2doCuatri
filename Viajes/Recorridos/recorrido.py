@@ -4,13 +4,17 @@ class Recorrido:
         self.__nombre = nombre
 
     def dar_longitud(self):
-        pass
+        total = 0
+        for obje in self.__recorrido:
+            total += obje.largo
+        return total
 
-    def dar_tiempo(self,transporte):
-        pass
+    def dar_tiempo_minimo(self, transporte):
+        valor = self.dar_longitud() / transporte.velocidad
+        return "{0:.2f}".format(valor)
 
     def dar_consumo(self,transporte):
-        pass
+        return self.dar_longitud()* transporte.consumo
 
     def dar_costo(self,transporte,precio_combustible):
         pass
@@ -20,5 +24,6 @@ class Recorrido:
 
     @staticmethod
     def dar_recorrido(self):
+        print(self.__nombre)
         for obje in range (len(self.__recorrido)):
             print(self.__recorrido[obje])
