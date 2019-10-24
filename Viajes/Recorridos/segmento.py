@@ -1,5 +1,3 @@
-from Transporte import transporte
-
 class Segmento:
     def __init__(self,origen,destino,precio,peaje,largo):
         self.__origen = origen # str
@@ -9,10 +7,10 @@ class Segmento:
         self.__largo = largo # float
 
     def __str__(self):
-        return '{} - {} - {} - {} - {}'.format(self.__origen, self.__destino, self.__precio, self.__peaje, self.__largo)
+        return '{} - {} - $ {} - Peaje $ {} - {} Km.'.format(self.__origen, self.__destino, self.__precio, self.__peaje, self.__largo)
 
-    def dar_consumo(self): # float
-        return transporte.Transporte.consumo * self.__largo
+    def dar_consumo(self,transporte): # float
+        return transporte.consumo * self.__largo
 
     @property
     def precio(self):
