@@ -1,6 +1,6 @@
 # Consulta de alumnos
 
-### Se ingresa a través de `alumnos_web.py`
+### Se prueba corriendo `alumnos_web.py` e ingresando luego en http://localhost:8080/lista
 
 Incluye:
 - Archivos .py
