@@ -9,4 +9,4 @@ Incluye:
 - Archivo .db
 
 #### Utiliza el framework web `Bottle` de Python
-#### También el módulo SQLite3 para crear la base de datos y operar con tablas y registros
+#### También el módulo `SQLite3` para crear la base de datos y operar con tablas y registros
