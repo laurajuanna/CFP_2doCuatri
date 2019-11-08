@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Listado</title>
+    <link rel="stylesheet" href="estilos.css">
+    </head>   
+    <body>
+        <div class="all">
+            <div class="main">
+                <h1>Listado de Alumnos</h1>
+                <br>
+                <table class="tablita">
+                    % if len(listado) == 0:
+                        <tr style="text-align:center;">
+                            <td colspan="5">No hay alumnos que mostrar</td>
+                        </tr>
+                    % else:    
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>DNI</th>
+                            <th>Año de Inscripción</th>
+                            <th>Curso</th>
+                        </tr>
+                    % for r in listado:                       
+                        <tr style="text-align:center;">
+                            <td>{{r[0]}}</td>
+                            <td>{{r[1]}}</td>
+                            <td>{{r[2]}}</td>
+                            <td>{{r[3]}}</td>
+                            <td>{{r[4]}}</td>
+                        </tr>
+                    % end
+                </table>
+                <br>
+                <div class="botones">
+                    <a href="/consulta" class="button">Buscar Alumnos</a>
+                    <a href="/agregar_a" class="button">Agregar Alumnos</a>
+                </div>
+                
+            </div>
+        </div>
+    </body>
+</html>
