@@ -6,5 +6,7 @@ Incluye:
 - Archivos .py
 - Archivos .html
 - Archivo .css
+- Archivo .db
 
-#### Utiliza el framework web `Bottle` de Python.
+#### Utiliza el framework web `Bottle` de Python
+#### También el módulo SQLite3 para crear la base de datos y operar con tablas y registros
