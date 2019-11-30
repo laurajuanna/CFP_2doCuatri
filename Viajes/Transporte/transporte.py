@@ -6,8 +6,8 @@ class Transporte:
         self.__consumo = consumo
         self.__vel_max = vel_max
 
-    @property # ESTO ES PARA SACAR EL PRECIO EN EL ARCHIVO PASAJERO.PY
-    def pasa(self):
+    @property
+    def pasajeros(self):
         return self.__pasajeros
 
     @property
@@ -18,21 +18,26 @@ class Transporte:
     def velocidad(self):
         return self.__vel_max
 
-    def agregar_pasajero(self,pax): #pasajero
-        self.__pasajeros.append(pax)
+    def agregar_pasajero(self,pax): # probado
+        capacidad = self.__capacidad
+        ocupados = len(self.__pasajeros)
+        if ocupados < capacidad:
+            self.__pasajeros.append(pax)
+        else:
+            print("Vehiculo completo")
 
-    def dar_ingreso(self):
-        pass
+    def dar_ingreso(self): # probado
+        total = 0
+        for pax in self.__pasajeros:
+            total += pax.precio
+        return total
 
     @staticmethod
-    def listar_pasajeros(self):
+    def listar_pasajeros(self): # probado
         print('\nPatente: ' + self.__patente)
         for valor in range(len(self.__pasajeros)):
             print(self.__pasajeros[valor])
-        print('\nAsientos ocupados: '+str(len(self.__pasajeros))+'\nAsientos libres: '+str(self.__capacidad - len(self.__pasajeros)))
 
-    def dar_consumo(self):
-        pass
 
-    def dar_costo(self):
-        pass
+    def dar_porcentaje_ocupacion(self): # probado
+        print('\nAsientos ocupados: ' + str(len(self.__pasajeros)) + '\nAsientos libres: ' + str(self.__capacidad - len(self.__pasajeros)))

@@ -1,34 +1,65 @@
 from Pasajeros import pasajero
-from Recorridos import recorrido,segmento
+from Recorridos import recorrido, segmento
 from Transporte import transporte
 
-s1 = segmento.Segmento("Retiro","Liniers",30,160,5)
+# Creo los segmentos
+s1 = segmento.Segmento("Retiro","Liniers",30, 160, 5)
 s2 = segmento.Segmento("Liniers", "Lujan", 180, 300, 70)
 s3 = segmento.Segmento("Lujan", "Chacabuco", 275, 120, 175)
-s4 = segmento.Segmento("Chacabuco", "Junin", 175,0,60)
+s4 = segmento.Segmento("Chacabuco", "Junin", 175, 0, 60)
 
-r = recorrido.Recorrido("Ida Retiro - Junin")
+# Creo el recorrido
+r = recorrido.Recorrido("IDA RETIRO - JUNIN")
+
+# Agrego los segmentos al recorrido
 r.agregar_segmento(s1)
 r.agregar_segmento(s2)
 r.agregar_segmento(s3)
 r.agregar_segmento(s4)
 
-recorrido.Recorrido.dar_recorrido(r)
+# Muestro el recorrido
+r.dar_recorrido(r)
 
-pax1 = pasajero.Pasajero(23123123,'Ana','Liniers','Chacabuco')
-pax2 = pasajero.Pasajero(54321321, 'Pablo', 'Retiro', 'Junin')
-pax3 = pasajero.Pasajero(43432433, 'Carla', 'Retiro', 'Chacabuco')
+# Doy la longitud total del recorrido
+print('\nLongitud total del recorrido: '+ str(r.dar_longitud())+' Km.')
 
+# Pregunto si el recorrido tiene huecos
+print("\nEl recorrido esta completo? " + str(r.esta_completo()))
+
+# Creo los pasajeros
+pasajero_1 = pasajero.Pasajero(23123123, 'Ana', 'Liniers', 'Chacabuco',r)
+pasajero_2 = pasajero.Pasajero(54321321, 'Pablo', 'Retiro', 'Junin',r)
+pasajero_3 = pasajero.Pasajero(43432433, 'Carla', 'Retiro', 'Chacabuco',r)
+
+# Creo el transporte
 t = transporte.Transporte('OVD543', 62, 0.85, 90)
-t.agregar_pasajero(pax1)
-t.agregar_pasajero(pax2)
-t.agregar_pasajero(pax3)
 
-print('\nEl total del recorrido tiene una longitud de '+ str(recorrido.Recorrido.dar_longitud(r))+' Km.')
-#print Esta_completo !!! Preguntar a que se refiere con esto, los huecos del recorrido?
-transporte.Transporte.listar_pasajeros(t)
+# Agrego los pasajeros
+t.agregar_pasajero(pasajero_1)
+t.agregar_pasajero(pasajero_2)
+t.agregar_pasajero(pasajero_3)
 
-print('\nEl tiempo mínimo en completar el recorrido es de: '+str(recorrido.Recorrido.dar_tiempo_minimo(r, t))+' Horas')
-print('El total del recorrido consume '+str(recorrido.Recorrido.dar_consumo(r,t))+' Litros de Combustible.')
+# Doy la lista de pasajeros con el metodo estático
+t.listar_pasajeros(t)
 
-# pasajero.Pasajero.dar_precio(t) # ESTO ES PARA SACAR EL PRECIO DE CADA PASAJERO, TODAVIA NO ENTIENDO LA LOGICA
+# Muestro el porcentaje de ocupacion
+t.dar_porcentaje_ocupacion()
+
+
+# Muestro el tiempo mínimo del recorrido
+print('\nTiempo mínimo en completar el recorrido: '+str(r.dar_tiempo_minimo(t))+' Horas')
+
+# Muestro el consumo total de combustible del recorrido
+print('\nConsumo total del recorrido: '+str(r.dar_consumo(t))+' Lts x Km de Combustible.')
+
+# Muestro el costo total del recorrido (agregando el precio del Litro de combustible
+print("\nCosto total del recorrido: $"+str(r.dar_costo(t,54)))
+
+# Muestro el ingreso total
+print('\nIngreso total del recorrido: $' + str(t.dar_ingreso()))
+
+# Pregunto si existe un lugar en el recorrido y da TRUE
+print('\nExiste éste lugar en el recorrido? '+str(r.existe_lugar("Liniers")).upper())
+
+# Pregunto si existe un lugar en el recorrido y da FALSE
+print('\nExiste éste lugar en el recorrido? '+str(r.existe_lugar("La Boca")).upper())

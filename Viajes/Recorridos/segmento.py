@@ -1,21 +1,28 @@
 class Segmento:
-    def __init__(self,origen,destino,precio,peaje,largo):
+    def __init__(self,origen,destino,precio,peaje,longitud):
         self.__origen = origen # str
         self.__destino = destino # str
         self.__precio = precio # float
         self.__peaje = peaje # float
-        self.__largo = largo # float
+        self.__longitud = longitud # float
 
-    def __str__(self):
-        return '{} - {} - $ {} - Peaje $ {} - {} Km.'.format(self.__origen, self.__destino, self.__precio, self.__peaje, self.__largo)
 
-    def dar_consumo(self,transporte): # float
-        return transporte.consumo * self.__largo
+    @property
+    def origen(self):
+        return self.__origen
+
+    @property
+    def destino(self):
+        return self.__destino
 
     @property
     def precio(self):
-        return self.__precio + self.__peaje
+        return self.__precio
 
     @property
-    def largo(self):
-        return self.__largo
+    def peaje(self):
+        return self.__peaje
+
+    @property
+    def longitud(self):
+        return self.__longitud
