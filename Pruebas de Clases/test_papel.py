@@ -1,5 +1,5 @@
 import unittest
-import papel2
+import papel
 
 class Test_papel(unittest.TestCase):
     def setUp(self):
