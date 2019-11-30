@@ -1,5 +1,4 @@
 import unittest
-#import papel2
 import carrito
 
 class T_carrito(unittest.TestCase):
