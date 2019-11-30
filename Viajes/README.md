@@ -75,14 +75,14 @@ viajes
 	+--	transportes 
 	|       	+-- __init__.py
 	|		+-- transporte.py
-				|		+-- tests
+			+-- tests
 	|			+-- test_transporte.py
 	|
 	+--	pasajeros 
 			+-- __init__.py  
 			+-- pasajero.py
  			+-- tests
-			+-- test_pasajero.py
+				+-- test_pasajero.py
 ```
 
 •	En lo posible evitar el ingreso de datos incorrectos. Generar excepciones en casos de situaciones anómalas (transporte completo, recorrido incompleto, etc.)
