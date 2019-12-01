@@ -1,27 +1,3 @@
-class Mascota():
-    def __init__(self,nombre,edad):
-        self.nombre = nombre
-        self.edad = edad
-
-    def saludar(self,mensaje):
-        print(mensaje)
-    def setEdad(self,edad):
-        self.edad = edad
-        print("Tiene",self.edad,"años.")
-    def getEdad(self):
-        print(self.edad)
-    def cumplirAnios(self):
-        self.edad +=1
-        print("Feliz",self.edad,"cumpleaños",self.nombre,"!")
-
-perro = Mascota("pipo",5)
-
-perro.saludar("Guau!")
-perro.setEdad(8)
-perro.getEdad()
-perro.cumplirAnios()
-
-"""
 import tkinter
 
 class Dado(tkinter.Button):
