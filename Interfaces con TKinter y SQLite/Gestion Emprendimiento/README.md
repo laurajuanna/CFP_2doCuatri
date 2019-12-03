@@ -5,6 +5,6 @@
 
 ### Para iniciar la aplicación se debe correr el archivo `main.py` en Python.
 
-![screenshot app Huerta Polar](https://github.com/laurajuanna/CFP_2doCuatri/blob/master/Interfaces%20con%20TKinter%20y%20SQLite/Gestion%20Emprendimiento/screenshot.jpg?raw=true)
+![screenshot app Huerta Polar](https://raw.githubusercontent.com/laurajuanna/PIOIX_2DOCuatrimestre/master/Interfaces%20con%20TKinter%20y%20SQLite/Gestion%20Emprendimiento/screenshot_huerta.jpg)
 
 ## La aplicación sigue en construcción
