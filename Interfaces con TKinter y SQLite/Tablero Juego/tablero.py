@@ -94,14 +94,14 @@ class Inicio(Juego):
             Tablero()
         self.canvas = Canvas(principal, width=486, height=332, bg="light yellow")
         self.canvas.place(x=5, y=5)
-        self.fondo = PhotoImage(file="fondo2.png")
+        self.fondo = PhotoImage(file="img/fondo2.png")
         self.canvas.create_image(9, 9, anchor=NW, image=self.fondo)
         self.comenzar = Button(principal,text="COMENZAR", font="Arial 17 bold", fg="DodgerBlue4", command=comenzar)
         self.comenzar.place(x=277, y=395, width=154, height=50)
-        self.azul = PhotoImage(file="avAz.png")
-        self.verde = PhotoImage(file="avVe.png")
-        self.violeta = PhotoImage(file="avVi.png")
-        self.naranja = PhotoImage(file="avNa.png")
+        self.azul = PhotoImage(file="img/avAz.png")
+        self.verde = PhotoImage(file="img/avVe.png")
+        self.violeta = PhotoImage(file="img/avVi.png")
+        self.naranja = PhotoImage(file="img/avNa.png")
 
         jugadores = Label(principal, bg="Light blue", text="INGRESE JUGADORES", font= "Helvetica 12")
         jugadores.place(x=35,y=346)
@@ -157,44 +157,44 @@ class Tablero(Juego):
         # ---------- TABLERO
         self.canvas = Canvas(principal, width=486,height=332, bg="light yellow")
         self.canvas.place(x=5,y=5)
-        self.fondo = PhotoImage(file="fondo2.png")
+        self.fondo = PhotoImage(file="img/fondo2.png")
         self.canvas.create_image(9,9, anchor=NW, image=self.fondo)
-        self.azul = PhotoImage(file="avAz.png")  # -------------- AVATAR AZUL
-        self.verde = PhotoImage(file="avVe.png")  # -------------- AVATAR VERDE
-        self.violeta = PhotoImage(file="avVi.png")  # -------------- AVATAR VIOLETA
-        self.naranja = PhotoImage(file="avNa.png")  # -------------- AVATAR NARANJA
+        self.azul = PhotoImage(file="img/avAz.png")  # -------------- AVATAR AZUL
+        self.verde = PhotoImage(file="img/avVe.png")  # -------------- AVATAR VERDE
+        self.violeta = PhotoImage(file="img/avVi.png")  # -------------- AVATAR VIOLETA
+        self.naranja = PhotoImage(file="img/avNa.png")  # -------------- AVATAR NARANJA
         # ------------- AVATARES
         cantidad = nuevo.getCantidad()
         if cantidad == 1:
-            azul = PhotoImage(file="avAz.png") # -------------- AVATAR AZUL
+            azul = PhotoImage(file="img/avAz.png") # -------------- AVATAR AZUL
             self.canvas.create_image(12,116, anchor=NW, image=azul)
         if cantidad == 2:
-            azul = PhotoImage(file="avAz.png")  # -------------- AVATAR AZUL
+            azul = PhotoImage(file="img/avAz.png")  # -------------- AVATAR AZUL
             self.canvas.create_image(12, 116, anchor=NW, image=azul)
-            verde = PhotoImage(file="avVe.png") # -------------- AVATAR VERDE
+            verde = PhotoImage(file="img/avVe.png") # -------------- AVATAR VERDE
             self.canvas.create_image(37,116, anchor=NW, image=verde)
         if cantidad == 3:
-            azul = PhotoImage(file="avAz.png")  # -------------- AVATAR AZUL
+            azul = PhotoImage(file="img/avAz.png")  # -------------- AVATAR AZUL
             self.canvas.create_image(12, 116, anchor=NW, image=azul)
-            verde = PhotoImage(file="avVe.png")  # -------------- AVATAR VERDE
+            verde = PhotoImage(file="img/avVe.png")  # -------------- AVATAR VERDE
             self.canvas.create_image(37, 116, anchor=NW, image=verde)
-            violeta = PhotoImage(file="avVi.png") # -------------- AVATAR VIOLETA
+            violeta = PhotoImage(file="img/avVi.png") # -------------- AVATAR VIOLETA
             self.canvas.create_image(12,141, anchor=NW, image=violeta)
         if cantidad == 4:
-            azul = PhotoImage(file="avAz.png")  # -------------- AVATAR AZUL
+            azul = PhotoImage(file="img/avAz.png")  # -------------- AVATAR AZUL
             self.canvas.create_image(12, 116, anchor=NW, image=azul)
-            verde = PhotoImage(file="avVe.png")  # -------------- AVATAR VERDE
+            verde = PhotoImage(file="img/avVe.png")  # -------------- AVATAR VERDE
             self.canvas.create_image(37, 116, anchor=NW, image=verde)
-            violeta = PhotoImage(file="avVi.png")  # -------------- AVATAR VIOLETA
+            violeta = PhotoImage(file="img/avVi.png")  # -------------- AVATAR VIOLETA
             self.canvas.create_image(12, 141, anchor=NW, image=violeta)
-            naranja = PhotoImage(file="avNa.png") # -------------- AVATAR NARANJA
+            naranja = PhotoImage(file="img/avNa.png") # -------------- AVATAR NARANJA
             self.canvas.create_image(37,141, anchor=NW, image=naranja)
-        dado0 = PhotoImage(file="dado0.png")
-        dado1 = PhotoImage(file="dado1.png")
-        dado2 = PhotoImage(file="dado2.png")
-        dado3 = PhotoImage(file="dado3.png")
-        dado4 = PhotoImage(file="dado4.png")
-        dado5 = PhotoImage(file="dado5.png")
+        dado0 = PhotoImage(file="img/dado0.png")
+        dado1 = PhotoImage(file="img/dado1.png")
+        dado2 = PhotoImage(file="img/dado2.png")
+        dado3 = PhotoImage(file="img/dado3.png")
+        dado4 = PhotoImage(file="img/dado4.png")
+        dado5 = PhotoImage(file="img/dado5.png")
         def tirarDado():
             nuevo.setDado()
             dado = nuevo.dado
@@ -228,7 +228,7 @@ class Mover(Juego):
                 if lugar == 26:
                     lugar = 0
             self.canvas.delete(self.azul)
-            self.azul = PhotoImage(file="avAz.png")
+            self.azul = PhotoImage(file="img/avAz.png")
             if lugar == 0:
                 self.azul
                 self.canvas.create_image(12, 116, anchor=NW, image=self.azul)
