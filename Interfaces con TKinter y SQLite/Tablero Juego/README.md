@@ -5,6 +5,6 @@
 
 #### Se debe correr el archivo `tablero.py`en Python para agregar nuevos clientes
 
-![screenshot](https://github.com/laurajuanna/CFP_2doCuatri/blob/master/Interfaces%20con%20TKinter%20y%20SQLite/Tablero%20Juego/screenshot.jpg)
+![screenshot](https://github.com/laurajuanna/PIOIX_2DOCuatrimestre/blob/master/Interfaces%20con%20TKinter%20y%20SQLite/Tablero%20Juego/screenshot.png?raw=true)
 
 ### La aplicación sigue en construcción
