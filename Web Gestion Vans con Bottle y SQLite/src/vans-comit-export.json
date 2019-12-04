@@ -1,0 +1,76 @@
+{
+  "contador" : {
+    "nroReservas" : 7
+  },
+  "reservas" : [ null, {
+    "01-Origen" : "Berazategui",
+    "02-Destino" : "Microcentro",
+    "03-Hora" : "8:00",
+    "04-Fecha" : "2019-11-22",
+    "05-Asiento" : "9",
+    "06-Pasajero" : {
+      "Nombre" : "Marta",
+      "Telefono" : "1578946879"
+    }
+  }, {
+    "01-Origen" : "Quilmes",
+    "02-Destino" : "Microcentro",
+    "03-Hora" : "8:00",
+    "04-Fecha" : "2019-11-22",
+    "05-Asiento" : "6",
+    "06-Pasajero" : {
+      "Nombre" : "Laura Ivanna",
+      "Telefono" : "1169346386"
+    }
+  }, {
+    "01-Origen" : "Bernal",
+    "02-Destino" : "Microcentro",
+    "03-Hora" : "8:00",
+    "04-Fecha" : "2019-11-22",
+    "05-Asiento" : "12",
+    "06-Pasajero" : {
+      "Nombre" : "Nadia Juiz",
+      "Telefono" : "1548786342"
+    }
+  }, {
+    "01-Origen" : "Quilmes",
+    "02-Destino" : "Microcentro",
+    "03-Hora" : "8:00",
+    "04-Fecha" : "2019-11-22",
+    "05-Asiento" : "18",
+    "06-Pasajero" : {
+      "Nombre" : "Daniela",
+      "Telefono" : "1547789674"
+    }
+  }, {
+    "01-Origen" : "Quilmes",
+    "02-Destino" : "Puerto Madero",
+    "03-Hora" : "7:45",
+    "04-Fecha" : "2019-11-22",
+    "05-Asiento" : "7",
+    "06-Pasajero" : {
+      "Nombre" : "Daniel",
+      "Telefono" : "15456789"
+    }
+  }, {
+    "01-Origen" : "Berazategui",
+    "02-Destino" : "Microcentro",
+    "03-Hora" : "8:30",
+    "04-Fecha" : "2019-11-22",
+    "05-Asiento" : "7",
+    "06-Pasajero" : {
+      "Nombre" : "CARO",
+      "Telefono" : "15444"
+    }
+  }, {
+    "01-Origen" : "Berazategui",
+    "02-Destino" : "Microcentro",
+    "03-Hora" : "8:15",
+    "04-Fecha" : "2019-11-23",
+    "05-Asiento" : "4",
+    "06-Pasajero" : {
+      "Nombre" : "Mirta",
+      "Telefono" : "15426349"
+    }
+  } ]
+}
