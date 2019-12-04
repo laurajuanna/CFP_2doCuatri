@@ -172,6 +172,7 @@
     }
     .contenido {
         background-image: url('/img/terminal.jpg');
+        height: 95vh;        
     }
 
     .contenido .texto {
